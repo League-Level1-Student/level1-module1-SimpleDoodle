@@ -11,23 +11,30 @@ package _03_harry_potter;
 		* 2. make him become invisible
 		* 3. spy on Professor Snape
 		* 4. make him become visible again
-		* 5. cast a “stupefy” spell
+		* 5. cast a â€œstupefyâ€� spell
 		*/
 
 public class HarryPotter {
+public static void HarryPotty() {
+	HarryPotter();
+	makeInvisible(true);
+	spyOnSnape();
+	makeInvisible(false);
+	castSpell("Stupify");
+}
 
-	private boolean cloakOn;
+	private static boolean cloakOn;
 
-	HarryPotter() {
+	private static void HarryPotter() {
 		System.out.println("making Harry Potter...");
 	}
 
-	void castSpell(String spell) {
+	static void castSpell(String spell) {
 		System.out.println("casting spell: " + spell);
 	}
 
-	void makeInvisible(boolean invisible) {
-		this.cloakOn = invisible;
+	 static void makeInvisible(boolean invisible) {
+		cloakOn = invisible;
 
 		if (cloakOn)
 			System.out.println("Harry is invisible");
@@ -35,7 +42,7 @@ public class HarryPotter {
 			System.out.println("Harry is visible");
 	}
 
-	void spyOnSnape() {
+	static void spyOnSnape() {
 		System.out.println("Harry sees Professor Snape doing nefarious things.");
 	}
 

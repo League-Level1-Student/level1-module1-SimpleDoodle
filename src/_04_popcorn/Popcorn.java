@@ -1,5 +1,7 @@
 package _04_popcorn;
 
+import javax.swing.JOptionPane;
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
@@ -82,5 +84,15 @@ public class Popcorn {
 	}
 	
 }
+class PopcornMaker {
+public static void main(String[] args) {
+	String flavor = JOptionPane.showInputDialog(null, "What flavor do you want your popcorn to be?");
+	Popcorn(flavor);
+	Microwave();
+}
 
+
+
+
+}
 
