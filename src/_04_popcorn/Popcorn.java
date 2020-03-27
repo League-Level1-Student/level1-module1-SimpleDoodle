@@ -84,15 +84,9 @@ public class Popcorn {
 	}
 	
 }
-class PopcornMaker {
-public static void main(String[] args) {
-	String flavor = JOptionPane.showInputDialog(null, "What flavor do you want your popcorn to be?");
-	Popcorn(flavor);
-	Microwave();
-}
 
 
 
 
-}
+
 
