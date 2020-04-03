@@ -6,9 +6,8 @@ import java.util.RandomAccess;
 import javax.swing.JOptionPane;
 
 public class vault {
-	static int code = 965204;
+	static int code = 897406;
 	static int a = 0;
-
 	public static void codebreaker() {
 		for (int i = 0; i < 1000000; i++) {
 
@@ -27,7 +26,7 @@ public class vault {
 	public static void vault() {
 		String s = JOptionPane.showInputDialog(null, "INSERT code to the RESTRICTED area.");
 		int i = Integer.parseInt(s);
-		if (i == 965204) {
+		if (i == code) {
 			System.out.println("The vault opens and there is a green ball.");
 		}
 	}
