@@ -1,5 +1,6 @@
 package _07_binary_converter;
 
+import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -11,26 +12,26 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class binaryconverter implements MouseListener {
+	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+	JButton button = new JButton();
+	JLabel label = new JLabel();
+	JTextField field = new JTextField(10);
+
 	public void binaryconverter() {
-		JFrame frame = new JFrame();
-		JPanel panel = new JPanel();
-		JLabel label = new JLabel();
-		JButton button = new JButton();
-		JTextField field = new JTextField(20);
 		frame.add(panel);
 		panel.add(field);
-		field.add(label);
 		panel.add(button);
+		field.add(label);
 		frame.show(true);
-		frame.pack();
 		button.setText("convert");
 		button.addMouseListener(this);
-		field.show(true);
+		frame.pack();
+		
 	}
-
 	@Override
 	public void mouseClicked(MouseEvent e) {
-String convert;
+	//convert();
 	}
 
 	@Override
@@ -57,7 +58,7 @@ String convert;
 
 	}
 
-	public String convert(String input) {
+	String convert(String input) {
 		if (input.length() != 8) {
 			JOptionPane.showMessageDialog(null, "Enter 8 bits, silly!!!");
 			return "-";
