@@ -4,13 +4,14 @@ import javax.swing.JOptionPane;
 
 public class PopcornMaker {
 public static void main(String[] args) {
-System.out.println("There is uncooked popcorn on the counter");
-String CornFlavor = JOptionPane.showInputDialog(null, "What flavor popcorn do you want?");
-String Minutes = JOptionPane.showInputDialog(null,"How long do you want the popcorn to cook?");
-System.out.println("The " + CornFlavor + " flavored popcorn is cooking for " + Minutes + " minutes.");
-System.out.println("3");
-System.out.println("2");
-System.out.println("1");
-System.out.println("Your " + CornFlavor + " popcorn is ready.");
+String s = "";
+s = JOptionPane.showInputDialog("What flavor do you want your popcorn?");
+Popcorn p = new Popcorn(s);
+Microwave m = new Microwave();
+String t = JOptionPane.showInputDialog(null, "How long do you want to cook the popcorn?");
+int time = Integer.parseInt(t);
+m.setTime(time);
+m.putInMicrowave(p);
+m.startMicrowave();
 }
 }

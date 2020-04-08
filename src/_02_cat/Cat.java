@@ -19,11 +19,8 @@ package _02_cat;
 
 public class Cat {
 public static void KitKat(){
-	meow();
-	printName();
-	kill();
 }
-	private static String name = "Jeff";
+	private String name;
 	private static int lives = 9;
 
 	Cat(String name) {
@@ -38,7 +35,7 @@ public static void KitKat(){
 		System.out.println("meeeeeooooooooooowwwwwwwww!!");
 	}
 
-	public static void printName() {
+	public void printName() {
 		if (name == null)
 			System.out.println("i don't know my own name!");
 		else
@@ -46,7 +43,7 @@ public static void KitKat(){
 	}
 
 	static void kill() {
-		lives-=1000;
+		lives--;
 		if (lives > 0)
 			System.out.println("nice try, but I still have " + lives + " lives left");
 		else if (lives < 0)

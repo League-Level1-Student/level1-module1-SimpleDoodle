@@ -1,6 +1,5 @@
 package _07_binary_converter;
 
-import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -16,7 +15,8 @@ public class binaryconverter implements MouseListener {
 	JPanel panel = new JPanel();
 	JButton button = new JButton();
 	JLabel label = new JLabel();
-	JTextField field = new JTextField(10);
+	JTextField field = new JTextField(20);
+	
 
 	public void binaryconverter() {
 		frame.add(panel);
@@ -27,11 +27,13 @@ public class binaryconverter implements MouseListener {
 		button.setText("convert");
 		button.addMouseListener(this);
 		frame.pack();
-		
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
-	//convert();
+		String input = field.getText();
+		//System.out.println(input);
+		convert(input);
+	
 	}
 
 	@Override
@@ -71,10 +73,13 @@ public class binaryconverter implements MouseListener {
 		try {
 			int asciiValue = Integer.parseInt(input, 2);
 			char theLetter = (char) asciiValue;
+			JOptionPane.showMessageDialog(null, theLetter);
+			System.out.println(asciiValue);
 			return "" + theLetter;
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Enter a binary, silly!!!");
 			return "-";
 		}
+		
 	}
 }
